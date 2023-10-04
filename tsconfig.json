@@ -1,0 +1,36 @@
+{
+  "extends": "astro/tsconfigs/base",
+  "compilerOptions": {
+    "types": [
+      "bun-types",
+      "astro/client"
+    ],
+    "jsx": "react-jsx",
+    "verbatimModuleSyntax": true,
+    "jsxImportSource": "react",
+    "lib": ["ESNext", "dom"],
+    "module": "esnext",
+    "target": "esnext",
+    "moduleResolution": "bundler",
+    "noEmit": true,
+    "allowImportingTsExtensions": true,
+    "moduleDetection": "force",
+    "allowJs": true, 
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "composite": true,
+    "downlevelIteration": true,
+    "allowSyntheticDefaultImports": true,
+    "plugins": [
+      {
+        "name": "@astrojs/ts-plugin"
+      },
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@components/*": ["src/components/*"],
+      "@layouts/*": ["src/layouts/*"]
+    }
+  }
+}
